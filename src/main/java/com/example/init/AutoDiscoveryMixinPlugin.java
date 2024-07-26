@@ -1,8 +1,8 @@
 package com.example.init;
 
-import org.spongepowered.asm.lib.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
+import org.objectweb.asm.tree.ClassNode;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
