@@ -5,7 +5,7 @@ plugins {
     java
     id("gg.essential.loom") version "0.10.0.+"
     id("dev.architectury.architectury-pack200") version "0.1.3"
-    id("com.github.johnrengelman.shadow") version "8.1.1"
+    id("io.github.goooler.shadow") version "8.1.8"
 }
 
 //Constants:
@@ -46,6 +46,7 @@ loom {
         mixinConfig("mixins.$modid.json")
     }
     // If you don't want mixins, remove these lines
+    @Suppress("UnstableApiUsage")
     mixin {
         defaultRefmapName.set("mixins.$modid.refmap.json")
     }
@@ -74,10 +75,10 @@ dependencies {
     forge("net.minecraftforge:forge:1.8.9-11.15.1.2318-1.8.9")
 
     // If you don't want mixins, remove these lines
-    shadowImpl("org.spongepowered:mixin:0.7.11-SNAPSHOT") {
+    shadowImpl("org.spongepowered:mixin:0.8.7-SNAPSHOT") {
         isTransitive = false
     }
-    annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT")
+    annotationProcessor("org.spongepowered:mixin:0.8.7-SNAPSHOT")
 
     // If you don't want to log in with your real minecraft account, remove this line
     runtimeOnly("me.djtheredstoner:DevAuth-forge-legacy:1.2.1")
